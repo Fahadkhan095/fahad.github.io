@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahad Khan — Cloud & DevOps Engineer</title>
+<meta name="description" content="Fahad Khan — Cloud & DevOps Engineer specializing in Microsoft Azure, networking, security, and CI/CD automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<nav class="rail" id="rail">
+  <div class="rail-top">
+    <span class="rail-mark">FK</span>
+  </div>
+  <ul class="rail-list">
+    <li><a href="#about" data-section="about"><span class="dot"></span>about</a></li>
+    <li><a href="#skills" data-section="skills"><span class="dot"></span>skills</a></li>
+    <li><a href="#projects" data-section="projects"><span class="dot"></span>projects</a></li>
+    <li><a href="#background" data-section="background"><span class="dot"></span>background</a></li>
+    <li><a href="#contact" data-section="contact"><span class="dot"></span>contact</a></li>
+  </ul>
+  <div class="rail-bottom">
+    <span class="status"><span class="status-dot"></span>open to opportunities</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <p class="hero-loc">New Delhi, India</p>
+      <h1>Fahad Khan</h1>
+      <p class="hero-role">Cloud &amp; DevOps Engineer</p>
+      <p class="hero-line">I design, secure, and automate cloud infrastructure — from Azure networks locked down with NSGs, to CI/CD pipelines that ship code safely.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:fahadkhan65751@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/fahadkhan00" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" id="netSvg">
+        <!-- grid backdrop -->
+        <defs>
+          <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="600" height="340" fill="url(#grid)"/>
+
+        <!-- VNet boundary -->
+        <rect x="280" y="40" width="300" height="260" rx="2" fill="none" stroke="#2c3c5c" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="292" y="60" class="svg-label svg-label-dim">vnet-prod · 10.0.0.0/16</text>
+
+        <!-- subnets -->
+        <rect x="300" y="80" width="120" height="90" rx="2" fill="#0f1a2e" stroke="#3a4d70" stroke-width="1"/>
+        <text x="310" y="98" class="svg-label svg-label-dim">subnet-web</text>
+        <text x="310" y="112" class="svg-label svg-label-dim">10.0.1.0/24</text>
+
+        <rect x="440" y="80" width="120" height="90" rx="2" fill="#0f1a2e" stroke="#3a4d70" stroke-width="1"/>
+        <text x="450" y="98" class="svg-label svg-label-dim">subnet-data</text>
+        <text x="450" y="112" class="svg-label svg-label-dim">10.0.2.0/24</text>
+
+        <!-- vm node -->
+        <rect x="318" y="128" width="84" height="30" rx="2" fill="#132038" stroke="#4ea1f3" stroke-width="1.2"/>
+        <text x="330" y="147" class="svg-label svg-label-accent">vm-app01</text>
+
+        <!-- key vault node -->
+        <rect x="458" y="128" width="84" height="30" rx="2" fill="#132038" stroke="#4ea1f3" stroke-width="1.2"/>
+        <text x="468" y="147" class="svg-label svg-label-accent">key-vault</text>
+
+        <!-- static web app node -->
+        <rect x="300" y="210" width="260" height="34" rx="2" fill="#132038" stroke="#4ea1f3" stroke-width="1.2"/>
+        <text x="312" y="231" class="svg-label svg-label-accent">static-web-app · CI/CD via GitHub Actions</text>
+
+        <!-- NSG gate -->
+        <rect x="150" y="130" width="80" height="36" rx="2" fill="#241a0c" stroke="#f2b84b" stroke-width="1.4"/>
+        <text x="164" y="152" class="svg-label svg-label-signal">NSG</text>
+
+        <!-- internet node -->
+        <circle cx="60" cy="148" r="26" fill="#0f1a2e" stroke="#7f93b0" stroke-width="1.2"/>
+        <text x="34" y="196" class="svg-label svg-label-dim">internet</text>
+
+        <!-- connecting lines -->
+        <path id="pulsePath" d="M86,148 L150,148" fill="none" stroke="#5b6f90" stroke-width="1.4"/>
+        <path d="M230,148 L280,148" fill="none" stroke="#5b6f90" stroke-width="1.4"/>
+        <path d="M310,170 L310,128" fill="none" stroke="#3a4d70" stroke-width="1.2"/>
+        <path d="M450,170 L450,128" fill="none" stroke="#3a4d70" stroke-width="1.2"/>
+        <path d="M60,174 L60,228 L300,228" fill="none" stroke="#4a5f82" stroke-width="1.2" stroke-dasharray="3 4"/>
+
+        <text x="20" y="300" class="svg-label svg-label-dim">az deploy --resource-group rg-prod --verify</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="panel" id="about">
+    <h2>About</h2>
+    <p>I'm a cloud and DevOps engineer based in New Delhi, focused on Microsoft Azure infrastructure, networking, and deployment automation. I like the parts of the job most people skip past — locking down a network with NSGs, wiring a CI/CD pipeline that catches problems before they reach production, and keeping identity and access under control with Entra ID and RBAC.</p>
+    <p>I work comfortably across Docker, Jenkins, Terraform, and GitHub Actions, and I'm currently deepening my Azure foundation through the AZ-900 certification.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="panel" id="skills">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-group">
+        <h3>Cloud</h3>
+        <ul class="tag-list">
+          <li>Microsoft Azure</li><li>Azure Virtual Machines</li><li>Azure Virtual Network</li><li>Azure Static Web Apps</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>DevOps &amp; CI/CD</h3>
+        <ul class="tag-list">
+          <li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>CI/CD Fundamentals</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Containers &amp; Automation</h3>
+        <ul class="tag-list">
+          <li>Docker</li><li>Jenkins</li><li>Terraform</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Networking</h3>
+        <ul class="tag-list">
+          <li>VNet</li><li>Subnets</li><li>NSG</li><li>DNS</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Security &amp; IAM</h3>
+        <ul class="tag-list">
+          <li>Microsoft Entra ID</li><li>RBAC</li><li>Conditional Access</li><li>Key Vault</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Scripting &amp; OS</h3>
+        <ul class="tag-list">
+          <li>Python</li><li>Azure Cloud Shell</li><li>Linux</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="panel" id="projects">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Static Website Hosting with Azure Static Web Apps</h3>
+        <span class="tag-status tag-shipped">shipped</span>
+      </div>
+      <p class="project-tools">Git · GitHub · GitHub Actions · Microsoft Azure</p>
+      <ul>
+        <li>Built a static website with HTML, CSS, and JavaScript and deployed it on Azure Static Web Apps.</li>
+        <li>Connected the GitHub repository to GitHub Actions for continuous deployment.</li>
+        <li>Configured automatic deployment on every push to the main branch.</li>
+        <li>Diagnosed and fixed GitHub Actions deployment configuration issues, then verified the app in production.</li>
+      </ul>
+      <a class="project-link" href="#">View repository →</a>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Secure Azure Cloud Infrastructure Deployment</h3>
+        <span class="tag-status tag-shipped">shipped</span>
+      </div>
+      <p class="project-tools">Microsoft Azure · VNet · NSG · Entra ID · RBAC · Azure Monitor · Defender for Cloud</p>
+      <ul>
+        <li>Designed and deployed a segmented Azure Virtual Network to isolate workloads by subnet.</li>
+        <li>Configured Network Security Groups to control inbound and outbound traffic.</li>
+        <li>Set up Microsoft Entra ID and RBAC for controlled, least-privilege access to resources.</li>
+        <li>Built Azure Monitor alerts and dashboards, and applied Defender for Cloud recommendations to harden the environment.</li>
+      </ul>
+      <a class="project-link" href="#">View repository →</a>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>CI/CD Pipeline for a Containerized App</h3>
+        <span class="tag-status tag-suggested">suggested build</span>
+      </div>
+      <p class="project-tools">Docker · Jenkins or GitHub Actions · Azure</p>
+      <ul>
+        <li>Containerize a small app with Docker and push images to a registry on each commit.</li>
+        <li>Build a pipeline that runs tests, builds the image, and deploys to Azure on a passing build.</li>
+        <li>Add rollback on failed health checks to make deploys safe to trust.</li>
+      </ul>
+      <a class="project-link" href="#">View repository →</a>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Infrastructure as Code with Terraform on Azure</h3>
+        <span class="tag-status tag-suggested">suggested build</span>
+      </div>
+      <p class="project-tools">Terraform · Microsoft Azure · VNet · NSG</p>
+      <ul>
+        <li>Provision a VNet, subnets, NSGs, and a VM entirely from Terraform configuration.</li>
+        <li>Store remote state securely and structure the config into reusable modules.</li>
+        <li>Document a plan/apply/destroy workflow so the environment is fully reproducible.</li>
+      </ul>
+      <a class="project-link" href="#">View repository →</a>
+    </article>
+  </section>
+
+  <!-- BACKGROUND -->
+  <section class="panel" id="background">
+    <h2>Background</h2>
+    <div class="bg-grid">
+      <div>
+        <h3>Education</h3>
+        <div class="bg-item">
+          <p class="bg-title">B.Tech, Electronics &amp; Communication Engineering</p>
+          <p class="bg-sub">Meerut Institute of Engineering &amp; Technology, Meerut, UP</p>
+          <p class="bg-meta">2021 – 2025 · CGPA 7.03</p>
+        </div>
+      </div>
+      <div>
+        <h3>Certifications</h3>
+        <ul class="cert-list">
+          <li><span>Microsoft Azure Fundamentals (AZ-900)</span><span class="bg-meta">Microsoft · in progress</span></li>
+          <li><span>Azure Cloud Fundamentals</span><span class="bg-meta">LinkedIn Learning</span></li>
+          <li><span>Azure Networking &amp; Security</span><span class="bg-meta">LinkedIn Learning</span></li>
+          <li><span>Microsoft Entra ID Fundamentals</span><span class="bg-meta">LinkedIn Learning</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="panel panel-contact" id="contact">
+    <h2>Contact</h2>
+    <p>Open to cloud and DevOps roles, and happy to talk through infrastructure or automation problems.</p>
+    <div class="contact-list">
+      <a href="mailto:fahadkhan65751@gmail.com">fahadkhan65751@gmail.com</a>
+      <a href="https://linkedin.com/in/fahadkhan00" target="_blank" rel="noopener">linkedin.com/in/fahadkhan00</a>
+      <span>New Delhi, India</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Fahad Khan. Built with HTML, CSS &amp; JavaScript, deployed on GitHub Pages.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
